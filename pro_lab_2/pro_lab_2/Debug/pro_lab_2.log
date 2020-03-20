@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+c:\users\asus\source\repos\pro_lab_2\pro_lab_2\source.cpp(22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\asus\source\repos\pro_lab_2\pro_lab_2\source.cpp(130): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+  pro_lab_2.vcxproj -> C:\Users\asus\source\repos\pro_lab_2\Debug\pro_lab_2.exe
