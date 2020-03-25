@@ -29,14 +29,14 @@ int main(int argc, char *argv[])
 	}
 
 
-	int numOfElemsToEachProces, numOfExtraProces, sizeOfAdditionalArr;
+	int numOfElemsToEachProces, numOfExtraElems, sizeOfAdditionalArr;
 
 	//to calculate extra size for an array
-	numOfExtraProces = sizeOfArr % size;
-	numOfElemsToEachProces = (sizeOfArr - numOfExtraProces) / size;
-	if (numOfExtraProces >= 1) {
+	numOfExtraElems = sizeOfArr % size;
+	numOfElemsToEachProces = (sizeOfArr - numOfExtraElems) / size;
+	if (numOfExtraElems >= 1) {
 		numOfElemsToEachProces += 1;
-		sizeOfAdditionalArr = sizeOfArr - numOfExtraProces + size;
+		sizeOfAdditionalArr = sizeOfArr - numOfExtraElems + size;
 	}
 	else
 		sizeOfAdditionalArr = sizeOfArr;
@@ -67,8 +67,8 @@ int main(int argc, char *argv[])
 	if (rank == 0)
 	{
 		cout << "\nFrom rank #" << rank << ": Sorted array:     ";
-		if (numOfExtraProces >= 1)
-			for (int i = size - numOfExtraProces; i < sizeOfAdditionalArr; i++)
+		if (numOfExtraElems >= 1)
+			for (int i = size - numOfExtraElems; i < sizeOfAdditionalArr; i++)
 			{
 				cout << additionalArr[i] << " ";
 			}
