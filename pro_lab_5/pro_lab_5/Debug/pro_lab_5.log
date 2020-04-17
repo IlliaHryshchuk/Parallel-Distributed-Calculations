@@ -1,0 +1,13 @@
+﻿  Source.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+c:\users\asus\source\repos\pro_lab_5\pro_lab_5\source.cpp(42): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\asus\source\repos\pro_lab_5\pro_lab_5\source.cpp(53): warning C4101: 'numOfNegatives': unreferenced local variable
+f:\programs\vs fignia\vc\tools\msvc\14.16.27023\include\algorithm(1816): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  c:\users\asus\source\repos\pro_lab_5\pro_lab_5\source.cpp(133): note: see reference to function template instantiation 'void std::generate<std::_Vector_iterator<std::_Vector_val<std::_Simple_types<_Ty>>>,task_2::<lambda_07165e26a9f57ef49f7305f67471d805>>(_FwdIt,_FwdIt,_Fn)' being compiled
+          with
+          [
+              _Ty=float,
+              _FwdIt=std::_Vector_iterator<std::_Vector_val<std::_Simple_types<float>>>,
+              _Fn=task_2::<lambda_07165e26a9f57ef49f7305f67471d805>
+          ]
+  pro_lab_5.vcxproj -> C:\Users\asus\source\repos\pro_lab_5\Debug\pro_lab_5.exe
