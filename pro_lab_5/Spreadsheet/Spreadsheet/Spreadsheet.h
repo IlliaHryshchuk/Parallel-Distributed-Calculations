@@ -11,8 +11,11 @@ class Spreadsheet;
 
 class SpreadsheetGenerator
 {
+protected:
+	SpreadsheetGenerator() {};
 private:
 	std::string generateExpression();
+	
 public:
 	void generate(const int numOfRows, const int numOfCols, Spreadsheet &spreadsheet);
 };
