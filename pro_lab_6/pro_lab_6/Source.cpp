@@ -10,7 +10,7 @@ using namespace std;
 
 
 void task_1();
-void printMatrix(vector<vector<int>> matrix);
+void printMatrix(const vector<vector<int>> matrix);
 vector<vector<int>> generateMatrix(vector<vector<int>> matrix);
 
 int main()
@@ -55,13 +55,13 @@ vector<vector<int>> generateMatrix(vector<vector<int>> matrix)
 }
 
 
-void printMatrix(vector<vector<int>> matrix)
+void printMatrix(const vector<vector<int>> matrix)
 {
 	cout << "Matrix:";
 	for (int i = 0; i < matrix.size(); i++)
 	{
 		cout << endl;
-		copy(matrix[i].begin(), matrix[i].end(), ostream_iterator<int>(cout, " "));
+		copy(matrix[i].begin(), matrix[i].end(), ostream_iterator<int>(cout, "\t"));
 	}
 	cout << endl;
 }
