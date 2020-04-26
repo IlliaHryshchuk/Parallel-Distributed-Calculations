@@ -4,39 +4,47 @@
 #include <vector>
 #include <omp.h>
 
-
-class SpreadsheetGenerator;
 class Spreadsheet;
+class SpreadsheetGenerator;
+class SpreadsheetCalculator;
+
+
+class Spreadsheet 
+{
+public:
+	Spreadsheet(int numOfRows, int numOfCols);
+	Spreadsheet();
+	~Spreadsheet();
+
+	int getRows() const;
+	int getColumns() const;
+
+	std::vector<std::string>& operator[](size_t index);
+	const std::vector<std::string> operator[](size_t index) const;
+
+	void resize(int numOfRows, int numOfCols);
+	void print();
+private:
+	std::vector<std::vector<std::string>> cell;
+};
 
 
 class SpreadsheetGenerator
 {
-protected:
-	SpreadsheetGenerator() {};
-private:
-	std::string generateExpression();
-	
 public:
-	void generate(const int numOfRows, const int numOfCols, Spreadsheet &spreadsheet);
+	static Spreadsheet generate(const int numOfRows, const int numOfCols);
+private:
+	static std::string generateExpression();
+protected:
+	SpreadsheetGenerator();
 };
 
 
-
-class Spreadsheet : public SpreadsheetGenerator
+class SpreadsheetCalculator
 {
-private:
-	int rows, cols;
-	std::vector<std::vector<std::string>> cell;
 public:
-	Spreadsheet();
-	~Spreadsheet();
-
-	int getRows();
-	int getColumns();
-
-	std::vector<std::string>& operator[](int index);
-	void resizeSpreadsheet(int numOfRows, int numOfCols);
-	void printSpreadsheet();
-
-	friend class SpreadsheetGenerator;
+	static std::string calculateExpression(const std::string expression);
+	static Spreadsheet calculateSpreadsheet(const Spreadsheet spreadsheet);
+protected:
+	SpreadsheetCalculator();
 };

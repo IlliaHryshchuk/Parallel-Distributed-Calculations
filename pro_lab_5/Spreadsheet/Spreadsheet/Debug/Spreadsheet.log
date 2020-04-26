@@ -1,1 +1,5 @@
-﻿  Spreadsheet.vcxproj -> C:\Users\asus\source\repos\pro_lab_5\Debug\Spreadsheet.lib
+﻿  Spreadsheet.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+c:\users\asus\source\repos\spreadsheet\spreadsheet\spreadsheet.cpp(101): warning C4018: '<': signed/unsigned mismatch
+c:\users\asus\source\repos\spreadsheet\spreadsheet\spreadsheet.cpp(69): warning C4715: 'SpreadsheetGenerator::generateExpression': not all control paths return a value
+  Spreadsheet.vcxproj -> C:\Users\asus\source\repos\ProducerConsumerModificationForSpreadsheets\Debug\Spreadsheet.lib
